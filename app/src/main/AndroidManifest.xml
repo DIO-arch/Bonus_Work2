@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Bonus_Work">
-        <activity android:name=".Display_EXP"></activity>
+        <activity android:name=".Graphs_page"></activity>
+        <activity android:name=".Display_EXP" />
         <activity android:name=".Bluetooth_Connecter" />
         <activity android:name=".RandomTest" />
         <activity android:name=".MainActivity">

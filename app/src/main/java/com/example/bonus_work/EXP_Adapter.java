@@ -17,13 +17,14 @@ public class EXP_Adapter extends ArrayAdapter<EXP> {
     public EXP_Adapter(Context context, int resource, ArrayList<EXP> objects){
         super(context, resource, objects);
 
-        this.ctx=context;
+        this.ctx = context;
         this.resourceId = resource;
         this.ary = objects;
     }
     public int getCount(){
         return this.ary.size();
     }
+
     public View getView(int position, View convertView, ViewGroup parent){
         LayoutInflater li = (LayoutInflater) this.ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
