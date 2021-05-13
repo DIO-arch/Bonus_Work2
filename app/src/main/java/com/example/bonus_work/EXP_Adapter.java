@@ -26,6 +26,7 @@ public class EXP_Adapter extends ArrayAdapter<EXP> {
     }
 
     public View getView(int position, View convertView, ViewGroup parent){
+
         LayoutInflater li = (LayoutInflater) this.ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View v = li.inflate(this.resourceId, null);

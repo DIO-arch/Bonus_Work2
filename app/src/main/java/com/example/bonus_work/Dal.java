@@ -35,6 +35,7 @@ public class Dal extends SQLiteAssetHelper {
         EXP e = new EXP();
         e.setName(cursor.getString(cursor.getColumnIndex("name")));
         e.setValue(cursor.getString(cursor.getColumnIndex("value")));
+        e.setId(cursor.getLong(cursor.getColumnIndex("_id")));
         ary.add(e); }
         return ary;
     }

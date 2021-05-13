@@ -49,7 +49,10 @@ public class RandomTest extends AppCompatActivity {
         String s = "[";
         for (i = 0; i < range1; i++) {
             range2 = r.nextInt(256);
-            s = range2 + ",";
+            if(i < range1 - 1)
+            s = s + range2 + ",";
+            else
+                s = s + range2;
         }
         s = s + "]";
         db.insertData(name, s);
