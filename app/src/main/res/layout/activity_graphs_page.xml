@@ -6,14 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".Graphs_page">
 
-    <com.github.mikephil.charting.charts.BarChart
-        android:id="@+id/bargraph"
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="200dip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></com.github.mikephil.charting.charts.BarChart>
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

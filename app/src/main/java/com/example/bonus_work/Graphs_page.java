@@ -8,6 +8,10 @@ import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.series.BarGraphSeries;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
 
 import java.util.ArrayList;
 
@@ -19,26 +23,14 @@ public class Graphs_page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graphs_page);
 
-        barChart = (BarChart) findViewById(R.id.bargraph);
-
-        ArrayList<BarChart> barEntries = new ArrayList<>();
-
-        barEntries.add(new BarChart(44f,0));
-        barEntries.add(new BarChart(88f,1));
-        barEntries.add(new BarChart(66f,2));
-        barEntries.add(new BarChart(12f,3));
-        barEntries.add(new BarChart(19f,4));
-        barEntries.add(new BarChart(91f,5));
-        BarDataSet barDataSet = new BarDataSet(barEntries, "Dates");
-
-        //ArrayList<String> theDates = new ArrayList<>();
-        //theDates.add("April");
-        //theDates.add("May");
-        //theDates.add("June");
-        //theDates.add("July");
-        //theDates.add("August");
-        //theDates.add("Septmber");
-        //BarData theData = new BarData((IBarDataSet) theDates,barDataSet);
-        //barChart.setData(theData);
+        GraphView graph = (GraphView) findViewById(R.id.graph);
+        BarGraphSeries<DataPoint> series = new BarGraphSeries<>(new DataPoint[] {
+                new DataPoint(0, -1),
+                new DataPoint(1, 5),
+                new DataPoint(2, 3),
+                new DataPoint(3, 2),
+                new DataPoint(4, 6)
+        });
+        graph.addSeries(series);
     }
 }
